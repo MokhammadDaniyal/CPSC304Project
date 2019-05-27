@@ -1,0 +1,13 @@
+drop table Stay_In;
+drop table Checks;
+drop table Drugs_Prescribes;
+drop table Health_Status_Check;
+drop table Doctor_R2;
+drop table Doctor;
+drop table Room;
+drop table Rabbit;
+drop table Cat;
+drop table Dog;
+drop table Animal;
+drop table Animal_R2;
+commit;
