@@ -3,7 +3,7 @@ create table Animal_R2(
     hypoallergenic char(5));
 
 create table Animal(
-    animal_id char(20) PRIMARY KEY,
+    animal_id char(10) PRIMARY KEY,
     name char(20),
     age number,
     gender char(6),
@@ -13,17 +13,17 @@ create table Animal(
 );
 
 create Table Dog(
-    animal_id char(20) PRIMARY KEY,
+    animal_id char(10) PRIMARY KEY,
     dewormed char(20),
     FOREIGN KEY (animal_id) REFERENCES Animal (animal_id) ON DELETE CASCADE);
 
 create Table Cat(
-    animal_id char(20) PRIMARY KEY,
+    animal_id char(10) PRIMARY KEY,
     declawed char(20),
     FOREIGN KEY (animal_id) REFERENCES Animal (animal_id) ON DELETE CASCADE);
 
 create Table Rabbit(
-    animal_id char(20) PRIMARY KEY,
+    animal_id char(10) PRIMARY KEY,
     overgrownteeth char(20),
     FOREIGN KEY (animal_id) REFERENCES Animal (animal_id) ON DELETE CASCADE);
 
@@ -37,9 +37,9 @@ create Table Doctor(
 
 create Table Doctor_R2(
     doctor_id char(20),
-    animal_id char(20) PRIMARY KEY,
-    FOREIGN KEY (doctor_id) REFERENCES Doctor(doctor_id) ON DELETE CASCADE
-);
+    animal_id char(10) PRIMARY KEY,
+    FOREIGN KEY (doctor_id) REFERENCES Doctor(doctor_id) ON DELETE CASCADE,
+    FOREIGN KEY (animal_id) REFERENCES Animal(animal_id) ON DELETE CASCADE);
 
 create Table Health_Status_Check (
     health_id char(20) PRIMARY KEY,
@@ -59,7 +59,7 @@ create Table Drugs_Prescribes(
 create Table Checks (
     health_id char(20),
     doctor_id char(20),
-    animal_id char(20),
+    animal_id char(10),
     PRIMARY KEY (health_id,doctor_id, animal_id),
     FOREIGN KEY (health_id) REFERENCES Health_Status_Check(health_id) ON DELETE CASCADE,
     FOREIGN KEY (doctor_id) REFERENCES Doctor(doctor_id) ON DELETE CASCADE,
@@ -67,7 +67,7 @@ create Table Checks (
 
 create Table Stay_In (
     room_id char(20),
-    animal_id char(20),
+    animal_id char(10),
     PRIMARY KEY (room_id, animal_id),
     FOREIGN KEY (room_id) REFERENCES Room(room_id) ON DELETE CASCADE,
     FOREIGN KEY (animal_id) REFERENCES Animal(animal_id) ON DELETE CASCADE);
