@@ -5,11 +5,13 @@ create table Animal_R2(
 create table Animal(
     animal_id char(10) PRIMARY KEY,
     name char(20),
-    age number,
+    age integer,
     gender char(6),
     breed char(20),
     donation_date char(30),
-    FOREIGN KEY (breed) REFERENCES Animal_R2 (breed)
+    customer_id char(20),
+    FOREIGN KEY (breed) REFERENCES Animal_R2 (breed),
+    FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
 );
 
 create Table Dog(
@@ -29,7 +31,7 @@ create Table Rabbit(
 
 create Table Room(
     room_id char(20) PRIMARY KEY,
-    room_size number);
+    room_size integer);
 
 create Table Doctor(
     doctor_id char(20) PRIMARY KEY,
@@ -52,7 +54,7 @@ create Table Health_Status_Check (
 create Table Drugs_Prescribes(
     name char(20),
     doctor_id char(20),
-    dosage number,
+    dosage integer,
     PRIMARY KEY (name, doctor_id),
     FOREIGN KEY (doctor_id) REFERENCES Doctor(doctor_id) ON DELETE CASCADE);
 
