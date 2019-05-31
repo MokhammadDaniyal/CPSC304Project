@@ -35,6 +35,21 @@ create table Animal(
     FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
 );
 
+create Table Dog(
+   animal_id char(10) PRIMARY KEY,
+   dewormed char(20),
+   FOREIGN KEY (animal_id) REFERENCES Animal (animal_id) ON DELETE CASCADE);
+
+create Table Cat(
+   animal_id char(10) PRIMARY KEY,
+   declawed char(20),
+   FOREIGN KEY (animal_id) REFERENCES Animal (animal_id) ON DELETE CASCADE);
+
+create Table Rabbit(
+   animal_id char(10) PRIMARY KEY,
+   overgrownteeth char(20),
+   FOREIGN KEY (animal_id) REFERENCES Animal (animal_id) ON DELETE CASCADE);
+
 create Table Room(
     room_id char(20) PRIMARY KEY,
     room_size integer);

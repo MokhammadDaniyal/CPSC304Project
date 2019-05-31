@@ -62,8 +62,8 @@ insert into Customer values
 
 insert into Customer values
 ('5','Rick', 'Arc Street', 'V0P1V6');
-/*Insert data into Animal table*/
 
+/*Insert data into Animal table*/
 insert into Animal values
 ('1', 'Cheddar', 3, 'Male', 'Corgi', 'May 1, 2019','1');
 
@@ -78,6 +78,19 @@ insert into Animal values
 
 insert into Animal values
 ('5', 'Luna', 3, 'Female', 'Schnauzer', 'May 3, 2019','2');
+
+/*Dog table*/
+insert into Dog values ('1', 'Yes');
+
+insert into Dog values ('3', 'No');
+
+insert into Dog values ('5', 'Yes');
+
+/*Cat table*/
+insert into Cat values ('2', 'No');
+
+/*Rabbit table*/
+insert into Rabbit values ('4', 'No');
 
 /*Room table*/
 insert into Room values
