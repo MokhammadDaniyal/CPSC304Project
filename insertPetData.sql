@@ -15,7 +15,6 @@ insert into Animal_R2 values
 insert into Animal_R2 values
 ('Bobtail', 'Yes');
 
-<<<<<<< HEAD
 /*Customer_R1 Table*/
 insert into Customer_R1 values
 ('V6P1V7','Vancouver', 'BC');
@@ -49,23 +48,20 @@ insert into Customer_R2 values
 ('Rick','1980-07-12');
 
 /*Customer Table*/
-=======
-/*Insert data into Customer Table*/
->>>>>>> parent of 5399161... revision
 insert into Customer values
-('1','Jacob', 'Oak Street', 'V6P1V7', 'Vancouver', 'British Columbia', '1990-03-05');
+('1','Jacob', 'Oak Street', 'V6P1V7');
 
 insert into Customer values
-('2','May', 'Fleming Street', 'V7J1Y2', 'Vancouver', 'British Columbia', '1970-10-20');
+('2','May', 'Fleming Street', 'V7J1Y2');
 
 insert into Customer values
-('3','John', 'Maple Street', 'V5P1B7', 'Abbotsford', 'British Columbia', '1962-03-25');
+('3','John', 'Maple Street', 'V5P1B7');
 
 insert into Customer values
-('4','Kelly', 'Acorn Street', 'V1P5V7', 'Vancouver', 'British Columbia', '1988-04-15');
+('4','Kelly', 'Acorn Street', 'V1P5V7');
 
 insert into Customer values
-('5','Rick', 'Arc Street', 'V0P1V6', 'Calgary', 'Alberta', '1980-07-12');
+('5','Rick', 'Arc Street', 'V0P1V6');
 /*Insert data into Animal table*/
 
 insert into Animal values
@@ -83,95 +79,7 @@ insert into Animal values
 insert into Animal values
 ('5', 'Luna', 3, 'Female', 'Schnauzer', 'May 3, 2019','2');
 
-<<<<<<< HEAD
 /*Room table*/
-=======
-insert into Animal values
-('6', 'Happy', 3, 'Male', 'Siamese', 'May 1, 2019','2');
-
-insert into Animal values
-('7', 'Toast', 5, 'Female', 'English Lop', 'May 2, 2019','2');
-
-insert into Animal values
-('8', 'Bud', 9, 'Male', 'Siamese', 'May 3, 2019','2');
-
-insert into Animal values
-('9', 'Bouncer', 8, 'Male', 'English Lop', 'May 9, 2019','2');
-
-insert into Animal values
-('10', 'Teddy', 8, 'Male', 'Corgi', 'May 25, 2019','2');
-
-insert into Animal values
-('11', 'Lily', 8, 'Male', 'Schnauzer', 'May 21, 2019','2');
-
-insert into Animal values
-('12', 'Charlie', 8, 'Male', 'Siamese', 'May 21, 2019','2');
-
-insert into Animal values
-('13', 'Tabby', 8, 'Male', 'Siamese', 'May 23, 2019','2');
-
-insert into Animal values
-('14', 'Carrot', 8, 'Female', 'English Lop', 'May 23, 2019','2');
-
-insert into Animal values
-('15', 'Peanut', 8, 'Male', 'English Lop', 'May 23, 2019','2');
-
-insert into Animal values
-('16', 'Berry', 8, 'Female', 'English Lop', 'May 23, 2019','1');
-
-/*Insert data into Dog table*/
-
-insert into Dog values
-('1', 'False');
-
-insert into Dog values
-('3', 'True');
-
-insert into Dog values
-('5', 'True');
-
-insert into Dog values
-('10', 'False');
-
-insert into Dog values
-('11', 'True');
-
-/*Insert data into Cat table*/
-
-insert into Cat values
-('2', 'False');
-
-insert into Cat values
-('6', 'True');
-
-insert into Cat values
-('8', 'True');
-
-insert into Cat values
-('12', 'False');
-
-insert into Cat values
-('13', 'True');
-
-/*Insert data into Rabbit table*/
-
-insert into Rabbit values
-('4', 'False');
-
-insert into Rabbit values
-('7', 'True');
-
-insert into Rabbit values
-('14', 'True');
-
-insert into Rabbit values
-('15', 'False');
-
-insert into Rabbit values
-('16', 'True');
-
-/*Insert data into Room table*/
->>>>>>> parent of 5399161... revision
 insert into Room values
 ('1', 5);
 
@@ -263,7 +171,6 @@ insert into Stay_In values
 ('2', '4');
 
 insert into Stay_In values
-<<<<<<< HEAD
 ('3', '5');
 
 /*Admin Data*/
@@ -310,8 +217,5 @@ INSERT INTO Viewing_Sets VALUES('2','2', '2019-05-20');
 INSERT INTO Viewing_Sets VALUES('3','3', '2019-05-22');
 
 
-=======
-('3', '7');
->>>>>>> parent of 5399161... revision
 
 commit work;

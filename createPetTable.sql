@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 create Table Customer_R1 (
    Postalcode char(6) PRIMARY KEY,
    City char(20),
@@ -20,8 +19,6 @@ create Table Customer (
 );
 
 
-=======
->>>>>>> parent of 5399161... revision
 create table Animal_R2(
     breed char(20) PRIMARY KEY,
     hypoallergenic char(5));
@@ -38,24 +35,6 @@ create table Animal(
     FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
 );
 
-<<<<<<< HEAD
-=======
-create Table Dog(
-    animal_id char(10) PRIMARY KEY,
-    dewormed char(20),
-    FOREIGN KEY (animal_id) REFERENCES Animal (animal_id) ON DELETE CASCADE);
-
-create Table Cat(
-    animal_id char(10) PRIMARY KEY,
-    declawed char(20),
-    FOREIGN KEY (animal_id) REFERENCES Animal (animal_id) ON DELETE CASCADE);
-
-create Table Rabbit(
-    animal_id char(10) PRIMARY KEY,
-    overgrownteeth char(20),
-    FOREIGN KEY (animal_id) REFERENCES Animal (animal_id) ON DELETE CASCADE);
-
->>>>>>> parent of 5399161... revision
 create Table Room(
     room_id char(20) PRIMARY KEY,
     room_size integer);
@@ -100,7 +79,6 @@ create Table Stay_In (
     PRIMARY KEY (room_id, animal_id),
     FOREIGN KEY (room_id) REFERENCES Room(room_id) ON DELETE CASCADE,
     FOREIGN KEY (animal_id) REFERENCES Animal(animal_id) ON DELETE CASCADE);
-<<<<<<< HEAD
 
 CREATE TABLE Administrator(
     AdminID char(10) PRIMARY KEY,
@@ -135,5 +113,3 @@ CREATE TABLE Viewing_Sets(
     Date_view char(10),
     FOREIGN KEY (CustomerID) REFERENCES Customer (customer_id) ON DELETE CASCADE
 );
-=======
->>>>>>> parent of 5399161... revision
