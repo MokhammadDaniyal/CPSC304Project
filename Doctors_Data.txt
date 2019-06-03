@@ -1,0 +1,124 @@
+// Put information here
+
+DOCTOR:
+
+DoctorID:
+D1
+D2
+D3
+D4
+D5
+
+
+Doctor Name
+Dr. Chan
+Dr. Smith
+Dr. Hazra
+Dr. Pearson
+Dr. Wong
+
+---
+
+DRUG:
+
+DrugName: User can select which drug based on Animal Type
+
+Select Animal Type: Dog, Cat, or Rabbit
+
+Dog Medication:
+Metronidazole
+Doxycycline
+Ivermectin 
+Ketoconazole
+Prednisone
+
+
+Cat Medication: 
+Gabapentin
+Amitriptyline
+Dexamethasone 
+Morphine
+Buprenorphine
+
+
+Rabbit Medication:
+Furosemide 
+Amikacin 
+Meloxicam 
+Doxycycline
+Aspirin
+
+
+DrugDosage: number
+5mg, 20mg, 1mL, 2mL, 5g, 10g, 15g
+
+
+---
+
+HEALTHSTATUS:
+
+HealthID:
+H1
+H2
+H3
+H4
+H5
+
+Vaccination:
+Dogs: 
+Rabies Shot
+Parainfluenza
+Lyme disease
+Leptospirosis
+Parvovirus
+
+Cats:
+Rabies Shot
+Feline Herpesvirus
+Calicivirus
+Feline Leukemia Virus 
+Bordetella
+
+Rabbits:
+Rabies Shot
+Calicivirus Vaccine
+Myxomatosis Vaccine
+Rabbit Haemorrhagic Disease 1 (RHD-1)
+Rabbit Haemorrhagic Disease 2 (RHD-2) Booster
+
+
+Allergies:
+Pollen Allergy
+Flea Saliva
+Gluten
+Beef
+Soy
+
+
+PreviousDiseases:
+
+Dog: 
+Rabies
+Dry Eye Syndrome
+Hookworm Infection
+Iris Cyst
+Mastocytoma
+
+
+Cat: 
+Rabies
+Ringworm
+Hookworm Infection
+Cowpox
+Pyometra
+
+
+Rabbit:
+Pasteurellosis
+Myxomatosis
+Viral hemorrhagic disease
+Encephalitozoonosis
+Calicivirus
+
+
+
