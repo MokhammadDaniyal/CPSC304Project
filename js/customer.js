@@ -16,3 +16,22 @@ function SearchFunction() {
         }
     }
 }
+
+function dropdownSearch(filterby, value) {
+    // TODO: Debug, check the following link for resource: 
+    // https://www.w3schools.com/jsref/event_onchange.asp
+    var filter, i, txtValue;
+    filter = filterby.value.toLowerCase();
+    cards = document.getElementsByClassName("animal-card");
+    var counter = "animal-"
+    var classname = counter.concat(filterby.toLowerCase());
+    row = document.getElementsByClassName("animal-content").getElementsByClassName(classname);
+    for (i = 0; i < row.length; i++) {
+        txtValue = row[i].innerText.toLowerCase();
+        if (txtValue.includes(value.toLowerCase())) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}

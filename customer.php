@@ -5,18 +5,33 @@
 
 <?php
 include "AnimalDisplay.php";
+
+function printForm($dv, $cn, $title){
+    echo '<h3 class="form-title">'. $title.'</h3>';
+    echo '<form id="'.$cn.'Select"><select>';
+    echo '<option value="selectone">Select One</option>';
+    while($row = $dv->fetch_assoc()){
+        echo '<option '. 'value="'.$row[$cn].'">'.$row[$cn].'</option>';
+    }
+    echo '</select></form>';
+}
+
 $ser="localhost";
 $user="root";
 $pass="";
 $db="petadoption";
 
 $con=mysqli_connect($ser, $user, $pass, $db) or die("Connection Failed...");
-// echo '<script language="javascript">';
-// echo 'alert("Database connected!")';
-// echo '</script>';
 
 $result = $con->query("SELECT * from animal");
+$gender = $con->query("SELECT DISTINCT gender from animal");
+$breed = $con->query("SELECT DISTINCT breed from animal");
+
 echo '<input type="text" id="searchInput" onkeyup="SearchFunction()" placeholder="Search" title="Search for an animal"></input>';
+printForm($gender, 'gender', 'Gender');
+printForm($breed, 'breed', 'Breed');
+
+
 if ($result->num_rows > 0) {
     // output data of each row
     echo '<div class="animal-table">';

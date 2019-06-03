@@ -22,12 +22,12 @@ class AnimalDisplay {
         echo "<h2>Placeholder for image</h2>";
         echo '</div>';
         echo '<div class="animal-content">';
-        echo "<h3>". "Name: ".$this->name."</h3>";
-        echo "<p>". "Age: ".$this->age."</p>";
-        echo "<p>". "Gender: ". $this->gender."</p>";
-        echo "<p>". "Breed: ".$this->breed."</p>";
-        echo "<p>". "Type: ".$this->type."</p>";
-        echo "<p>". "Hypoallergenic: ".$this->hypoallergenic."</p>";
+        echo '<h3 class="animal-name">'. "Name: ".$this->name."</h3>";
+        echo '<p class="animal-age">'. "Age: ".$this->age."</p>";
+        echo '<p class="animal-gender">'. "Gender: ". $this->gender."</p>";
+        echo '<p class="animal-breed">'. "Breed: ".$this->breed."</p>";
+        echo '<p class="animal-type">'. "Type: ".$this->type."</p>";
+        echo '<p class="animal-hypo">'. "Hypoallergenic: ".$this->hypoallergenic."</p>";
         echo "</div>";
         echo "</div>";
     }
