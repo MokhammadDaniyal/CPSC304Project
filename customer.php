@@ -7,11 +7,11 @@
 include "AnimalDisplay.php";
 
 function printForm($dv, $cn, $title){
-    echo '<h3 class="form-title">'. $title.'</h3>';
-    echo '<form id="'.$cn.'Select"><select>';
+    echo '<h3 class="select-title">'. $title.'</h3>';
+    echo '<form><select id="'.$cn.'Select"'.'onchange="dropdownSearch('.'&quot;'.$cn.'&quot;'.')" '.'>';
     echo '<option value="selectone">Select One</option>';
     while($row = $dv->fetch_assoc()){
-        echo '<option '. 'value="'.$row[$cn].'">'.$row[$cn].'</option>';
+        echo '<option '.'value="'.$row[$cn].'">'.$row[$cn].'</option>';
     }
     echo '</select></form>';
 }

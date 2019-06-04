@@ -18,7 +18,7 @@ class AnimalDisplay {
 
     public function printAnimal(){
         echo '<div class="animal-card">';
-        echo '<div class="animal-image">';
+        echo '<div class="animal-image span8">';
         echo "<h2>Placeholder for image</h2>";
         echo '</div>';
         echo '<div class="animal-content">';

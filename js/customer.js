@@ -17,21 +17,27 @@ function SearchFunction() {
     }
 }
 
-function dropdownSearch(filterby, value) {
+function dropdownSearch(x1) {
     // TODO: Debug, check the following link for resource: 
     // https://www.w3schools.com/jsref/event_onchange.asp
     var filter, i, txtValue;
-    filter = filterby.value.toLowerCase();
+    filter = document.getElementById(x1 + 'Select').value;
     cards = document.getElementsByClassName("animal-card");
-    var counter = "animal-"
-    var classname = counter.concat(filterby.toLowerCase());
-    row = document.getElementsByClassName("animal-content").getElementsByClassName(classname);
-    for (i = 0; i < row.length; i++) {
-        txtValue = row[i].innerText.toLowerCase();
-        if (txtValue.includes(value.toLowerCase())) {
+    row = document.getElementsByClassName('animal-' + x1.toLowerCase());
+    if (filter.includes("selectone")) {
+        for (i = 0; i < row.length; i++) {
             cards[i].style.display = "";
-        } else {
-            cards[i].style.display = "none";
+        }
+    } else {
+        for (i = 0; i < row.length; i++) {
+            txtValue = row[i].innerText.toLowerCase();
+            var matchstring = txtValue.split(':');
+            // console.log(matchstring);
+            if (matchstring[1].trim() == filter.toLowerCase()) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
         }
     }
 }
