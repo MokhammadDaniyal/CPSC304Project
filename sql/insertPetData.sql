@@ -207,11 +207,11 @@ INSERT INTO FoodOrders VALUES('3', 'Fish', 'Brand C', '30.30','2', 'Carbs');
 
 
 /*Viewing Set*/
-INSERT INTO Viewing_Sets VALUES('1','1', '2019-05-25');
+INSERT INTO Viewing_Sets VALUES('1','1', '1','2019-05-25');
 
-INSERT INTO Viewing_Sets VALUES('2','2', '2019-05-20');
+INSERT INTO Viewing_Sets VALUES('2','2', '2', '2019-05-20');
 
-INSERT INTO Viewing_Sets VALUES('3','3', '2019-05-22');
+INSERT INTO Viewing_Sets VALUES('3','3', '3', '2019-05-22');
 
 
 

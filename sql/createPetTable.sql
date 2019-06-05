@@ -115,7 +115,9 @@ CREATE TABLE FoodOrders(
  
 CREATE TABLE Viewing_Sets(
     ViewingID char(10) PRIMARY KEY,
+    AnimalID CHAR(10),
     CustomerID char(10),
     Date_view char(10),
-    FOREIGN KEY (CustomerID) REFERENCES Customer (customer_id) ON DELETE CASCADE
+    FOREIGN KEY (CustomerID) REFERENCES Customer (customer_id) ON DELETE CASCADE,
+    FOREIGN KEY (AnimalID) REFERENCES Animal (animal_id)
 ) ENGINE = INNODB;
