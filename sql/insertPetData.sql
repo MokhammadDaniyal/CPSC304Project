@@ -146,29 +146,13 @@ insert into Health_Status_Check values
 
 /*Drugs_Prescribes table*/
 insert into Drugs_Prescribes values
-('Acepromazine', '5', 2);
+('Acepromazine', '1', 2);
 
 insert into Drugs_Prescribes values
 ('Baytril', '2', 10);
 
 insert into Drugs_Prescribes values
 ('Capstar', '2', 5);
-
-/*Checks table*/
-insert into Checks values
-('1', '1', '1');
-
-insert into Checks values
-('2', '2', '2');
-
-insert into Checks values
-('3', '3', '3');
-
-insert into Checks values
-('4', '4', '4');
-
-insert into Checks values
-('5', '5', '5');
 
 /*Stay_In table*/
 insert into Stay_In values
