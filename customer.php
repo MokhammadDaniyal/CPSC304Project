@@ -1,8 +1,6 @@
 <!-- Class CSS -->
 <link href="css/customer.css" rel="stylesheet">
 
-<p>We are currently in the HTML section.</p>
-
 <?php
 include "AnimalDisplay.php";
 

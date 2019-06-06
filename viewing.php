@@ -7,7 +7,7 @@
     <h3>Animal ID</h3>
     <input type="text" name="animal_id">
     <h3>Requested Date</h3>
-    <input type="text" name="date">
+    <input type="text" id='datepicker' autocomplete="off" name="date">
     <input type="submit" value="Submit", name="submitform">
 </form>
 
@@ -21,3 +21,12 @@ if(array_key_exists('submitform', $_POST)){
     $curr_viewing->insertData();   
 }
 ?>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $( function() {
+        $( "#datepicker" ).datepicker();
+        $( "#datepicker" ).datepicker("option", "dateFormat","yy-mm-dd");
+    } );
+</script>

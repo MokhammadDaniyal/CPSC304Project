@@ -18,18 +18,27 @@ class Appointment {
         $this->viewing_id = strval(intval($last_id) + 1);
         $this->animal_id = $a;
         $this->customer_id = $c;
-        $this->animal_name = $this->con->query('SELECT name FROM animal Where animal_id='.'"'.$animal_id.'"')->fetch_assoc()['name'];
+        $counter = $this->con->query('SELECT name FROM animal WHERE animal_id='.'"'.$this->animal_id.'"');
+        if ($counter == TRUE){
+            $counter->fetch_assoc()['name'];
+        } else {
+            $this->animal_name = NULL;
+        }
+         
         $this->date = $d;
     }
     
     public function insertData() {
-        $sql = "INSERT INTO viewing_set VALUES (".'"'.$this->viewing_id.'"'.','.'"'.$this->animal_id.'"'.','.'"'.$this->customer_id.'",'.'"'.$this->date.'")';
-        echo $sql;
-        if ($con->query($sql) === TRUE) {
+        $sql = "INSERT INTO viewing_sets VALUES (".'"'.$this->viewing_id.'"'.','.'"'.$this->animal_id.'"'.','.'"'.$this->customer_id.'",'.'"'.$this->date.'")';
+        if ($this->con->query($sql) === TRUE) {
             echo "<p>Thank you, your request has been processed</p>";
         } else {
-            //echo "Error: " . $sql . "<br>" . $con->error;
-            echo "<p>There is something wrong, please try and input your data again</p>";
+            if(strpos($this->con->error, "FOREIGN KEY (`AnimalID`)") == TRUE){
+                echo "Please enter a valid pet ID";
+            } else {
+                echo "Error: " . $sql . "<br>" . $this->con->error;
+            }         
+            //echo "<p>There is something wrong, please try and input your data again</p>";
         }
     }
 }
