@@ -31,7 +31,8 @@ class Appointment {
     public function insertData() {
         $sql = "INSERT INTO viewing_sets VALUES (".'"'.$this->viewing_id.'"'.','.'"'.$this->animal_id.'"'.','.'"'.$this->customer_id.'",'.'"'.$this->date.'")';
         if ($this->con->query($sql) === TRUE) {
-            echo "<p>Thank you, your request has been processed</p>";
+            header("Refresh:3");
+            echo "<p>Thank you, your request has been processed. The page will refresh in 3 seconds.</p>";
         } else {
             if(strpos($this->con->error, "FOREIGN KEY (`AnimalID`)") == TRUE){
                 echo "Please enter a valid pet ID";

@@ -6,7 +6,7 @@
     $db="petadoption";
     $con=mysqli_connect($ser, $user, $pass, $db) or die("Connection Failed...");
     $con->query("ALTER TABLE viewing_sets CHANGE AnimalID animal_id char(10)");
-    $result = $con->query("SELECT animal_id, name, ViewingID, Date_view FROM viewing_sets NATURAL JOIN animal WHERE CustomerID='1'");
+    $result = $con->query("SELECT animal_id, name, ViewingID, Date_view FROM viewing_sets NATURAL JOIN animal WHERE CustomerID='1' AND Date_view >= CURDATE() ORDER BY Date_view ASC");
     if ($result->num_rows > 0) {
         // output data of each row
         echo '<table>';
@@ -18,7 +18,7 @@
         }
         echo '</table>';
     } else {
-        echo "No Animal in the Database";
+        echo "No Future Appointments in the Database";
     }
 ?>
 <h2>Make an Appointment</h3>
