@@ -38,6 +38,8 @@ if ($result->num_rows > 0) {
         $curr_animal->printAnimal();
     }
     echo '</div>';
+} else {
+    echo "No Animal in the Database";
 }
 ?>
 

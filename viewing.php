@@ -1,5 +1,26 @@
 <h2>My Appointments</h3>
-
+<?php
+    $ser="localhost";
+    $user="root";
+    $pass="";
+    $db="petadoption";
+    $con=mysqli_connect($ser, $user, $pass, $db) or die("Connection Failed...");
+    $con->query("ALTER TABLE viewing_sets CHANGE AnimalID animal_id char(10)");
+    $result = $con->query("SELECT animal_id, name, ViewingID, Date_view FROM viewing_sets NATURAL JOIN animal WHERE CustomerID='1'");
+    if ($result->num_rows > 0) {
+        // output data of each row
+        echo '<table>';
+        echo '<tr><th>Animal ID</th><th>Name</th><th>Viewing ID</th><th>Appointment Date</th></tr>';
+        while($row = $result->fetch_assoc()) {
+            echo '<tr>';
+            echo '<td>'.$row['animal_id'].'</td><td>'.$row['name'].'</td><td>'.$row['ViewingID'].'</td><td>'.$row['Date_view'].'</td>';
+            echo '</tr>';
+        }
+        echo '</table>';
+    } else {
+        echo "No Animal in the Database";
+    }
+?>
 <h2>Make an Appointment</h3>
 <form method="POST">
     <h3>Account ID</h3>
